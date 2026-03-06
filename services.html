@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | GreenTable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --forest-green: #2D5A27; --warm-orange: #F28C28; --soft-cream: #FFFDD0; }
+        body { background-color: var(--soft-cream); }
+        .navbar { background-color: var(--forest-green) !important; }
+        footer { background-color: var(--forest-green); color: white; padding: 40px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Home-Project.html">GreenTable</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home-Project.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="providers.html">Providers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="fw-bold mb-4">Our Services</h2>
+        <table class="table bg-white shadow-sm mb-5">
+            <thead class="table-dark"><tr><th>Service</th><th>Category</th></tr></thead>
+            <tbody>
+                <tr><td>Retail Rescue</td><td>Surplus Collection</td></tr>
+                <tr><td>Community Meal Link</td><td>Distribution</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Interactive Hub Map</h3>
+        <p>Click the <b>left</b> or <b>right</b> side of the image for status updates.</p>
+        <img src="Voluntiers.jpg" usemap="#hubmap" class="img-fluid rounded border shadow" id="interactive-img">
+        <map name="hubmap" id="hubmap">
+            <area shape="rect" coords="0,0,500,1000" href="javascript:void(0)" onclick="alert('Collection Hub: Active')">
+            <area shape="rect" coords="501,0,1000,1000" href="javascript:void(0)" onclick="alert('Distribution Center: Ready')">
+        </map>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><h5>GreenTable</h5></div>
+                <div class="col-md-4 text-center">
+                    <h5>Site Map</h5>
+                    <a href="Home-Project.html" class="text-white mx-1">Home</a>|
+                    <a href="services.html" class="text-white mx-1">Services</a>|
+                    <a href="providers.html" class="text-white mx-1">Providers</a>|
+                    <a href="contact.html" class="text-white mx-1">Contact</a>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="mb-0">John Ezekiel Shaban | CS - BM14 | 2026-2027</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function fixMap() {
+            const img = document.getElementById('interactive-img');
+            const areas = document.getElementsByTagName('area');
+            const w = img.clientWidth; const h = img.clientHeight;
+            areas[0].coords = `0,0,${w/2},${h}`; areas[1].coords = `${w/2},0,${w},${h}`;
+        }
+        window.onload = fixMap; window.onresize = fixMap;
+    </script>
+</body>
+</html>

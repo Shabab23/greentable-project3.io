@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | GreenTable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --forest: #1b4332; --accent: #ff9f1c; }
+        body { background: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1470&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; }
+        .navbar { background-color: var(--forest) !important; }
+        .contact-card { background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; border-left: 10px solid var(--accent); }
+        footer { background-color: var(--forest); color: white; padding: 40px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Home-Project.html">🌿 GreenTable</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home-Project.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="providers.html">Providers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="contact-card shadow-lg">
+                    <h2 class="fw-bold mb-4" style="color: var(--forest);">Get in Touch</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3"><label class="form-label">First Name</label><input type="text" class="form-control" placeholder="John"></div>
+                            <div class="col-md-6 mb-3"><label class="form-label">Last Name</label><input type="text" class="form-control" placeholder="Doe"></div>
+                        </div>
+                        <div class="mb-3"><label class="form-label">Email Address</label><input type="email" class="form-control" placeholder="john@example.com"></div>
+                        <div class="mb-3"><label class="form-label">Inquiry Type</label>
+                            <select class="form-select"><option>Become a Partner</option><option>Volunteer</option><option>General Inquiry</option></select>
+                        </div>
+                        <div class="mb-3"><label class="form-label">Your Message</label><textarea class="form-control" rows="4"></textarea></div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold py-3">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><div class="container text-center"><p>John Ezekiel Shaban | CS-BM14 | SY: 2026-2027</p></div></footer>
+</body>
+</html>
